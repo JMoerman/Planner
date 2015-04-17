@@ -1,0 +1,22 @@
+GtkLabel.days_text {
+	font-size: small;
+	color: grey;
+}
+
+GtkLabel.item_title {
+	font-size: large;
+	color: black;
+}
+
+OverviewItem:focused GtkLabel.item_title {
+	font-size: large;
+	color: black;
+}
+
+.list-row:selected {
+	background: rgb(240,240,240);
+}
+
+.list-row {
+	background: white;
+}
