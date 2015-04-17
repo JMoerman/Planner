@@ -24,3 +24,15 @@ A lot of work still needs to be done, as only basic functionality has been imple
 - Focus mode: blocking distractive sites untill you're done with your important tasks.
 - Borrowing the timer from _Go For It!_? (Look [here](https://github.com/mank319/Go-For-It/) for this awesome little application.)
 - Synchronisation
+
+## How to build this application:
+
+This application depends on libxml2, valac and Gtk+-3.0 >= 3.12. 
+
+On Ubuntu libxml2-dev is incomplete, so you will have to install libxslt1-dev as well (sudo apt-get install libxml2-dev libxslt1-dev).
+
+    mkdir build
+    cd build
+    cmake -DCMAKE_INSTALL_PREFIX=/usr ../
+    make
+    sudo make install (This doesn't have an advantage, as of yet.)
