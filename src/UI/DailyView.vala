@@ -25,6 +25,7 @@ class DailyView : Gtk.ScrolledWindow {
 
     private LinkedList<DailyTask> tasks;
     private Gtk.ListBox layout;
+    private PlaceholderWidget placeholder;
     
     public signal void marked_task ();
     
@@ -35,6 +36,9 @@ class DailyView : Gtk.ScrolledWindow {
         layout = new Gtk.ListBox ();
         layout.set_sort_func(sort_func);
         layout.expand = true;
+        
+        placeholder = new PlaceholderWidget ("Good job!", "You seem to be done for today!");
+        layout.set_placeholder (placeholder);
         
         tasks = new LinkedList<DailyTask> ();
         

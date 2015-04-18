@@ -195,10 +195,21 @@ OverviewTask:focused GtkLabel.task_title {
 
 .list-row {
     background: white;
-}""", -1);
+}
+
+GtkLabel.ph_header {
+    font-size: xx-large;
+    color: black;
+}
+
+GtkLabel.ph_subtext {
+    font-size: x-large;
+    color: grey;
+}
+""", -1);
             Gtk.StyleContext.add_provider_for_screen(Gdk.Screen.get_default(),css_provider, Gtk.STYLE_PROVIDER_PRIORITY_USER);
         } catch (Error e) {
-            error ("Cannot load CSS stylesheet: %s", e.message);
+            warning ("Cannot load CSS stylesheet: %s", e.message);
         }
     }
     

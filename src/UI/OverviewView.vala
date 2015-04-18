@@ -27,6 +27,7 @@ class OverviewView : Gtk.ScrolledWindow {
     private Gtk.ListBox layout;
     private OverviewTask previous_task;
     private Gtk.Window? mainwindow;
+    private PlaceholderWidget placeholder;
     
     public signal void marked_task (Task task);
     public signal void removed_task (Task task);
@@ -41,6 +42,9 @@ class OverviewView : Gtk.ScrolledWindow {
         layout.expand = true;
         
         layout.set_sort_func(sort_func);
+        
+        placeholder = new PlaceholderWidget ("Add some tasks!", "You don't seem to have any tasks.");
+        layout.set_placeholder (placeholder);
         
         tasks = new LinkedList<OverviewTask> ();
         

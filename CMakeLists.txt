@@ -37,6 +37,7 @@ vala_precompile(VALA_C ${EXEC_NAME}
     src/Data/TaskUtils.vala
     src/Data/TaskFile.vala
     src/Data/TaskController.vala
+    src/UI/PlaceholderWidget.vala
     src/UI/OverviewTask.vala
     src/UI/TaskDialog.vala
     src/UI/OverviewView.vala
